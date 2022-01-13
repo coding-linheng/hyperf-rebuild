@@ -1,0 +1,19 @@
+{
+    "name": "root/rebuild",
+    "authors": [
+        {
+            "name": "codinglin",
+            "email": "494020937@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "app",
+            "rebuild\\": "src"
+        }
+    },
+    "require": {
+        "symfony/console": "^6.0",
+        "symfony/finder": "^6.0"
+    }
+}
