@@ -1,16 +1,88 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '667f603f922d16715c0ee46ff0f1e5beb6480562',
     'name' => 'root/rebuild',
   ),
   'versions' => 
   array (
+    'doctrine/inflector' => 
+    array (
+      'pretty_version' => '2.0.4',
+      'version' => '2.0.4.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '8b7ff3e4b7de6b2c84da85637b59fd2880ecaa89',
+    ),
+    'hyperf/contract' => 
+    array (
+      'pretty_version' => 'v2.2.8',
+      'version' => '2.2.8.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6fe18888f8f868a7dad78fefe9397e45a39f3b2e',
+    ),
+    'hyperf/engine' => 
+    array (
+      'pretty_version' => 'v1.2.1',
+      'version' => '1.2.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'be371c486d1e0809fd84d248f554229c985409a7',
+    ),
+    'hyperf/http-message' => 
+    array (
+      'pretty_version' => 'v2.2.19',
+      'version' => '2.2.19.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'eddcfe8242a2ddf635a497e02445cb9a43143f79',
+    ),
+    'hyperf/macroable' => 
+    array (
+      'pretty_version' => 'v2.2.13',
+      'version' => '2.2.13.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e82df0983d43b2c8c4a801172ca2190ba8c2e0cf',
+    ),
+    'hyperf/utils' => 
+    array (
+      'pretty_version' => 'v2.2.23',
+      'version' => '2.2.23.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'a4dcdfa3f4bb4ef416c824e74751da8806c4f74b',
+    ),
+    'laminas/laminas-mime' => 
+    array (
+      'pretty_version' => '2.9.1',
+      'version' => '2.9.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '72d21a1b4bb7086d4a4d7058c0abca180b209184',
+    ),
+    'laminas/laminas-stdlib' => 
+    array (
+      'pretty_version' => '3.7.1',
+      'version' => '3.7.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'bcd869e2fe88d567800057c1434f2380354fe325',
+    ),
     'psr/container' => 
     array (
       'pretty_version' => '2.0.2',
@@ -19,6 +91,15 @@
       array (
       ),
       'reference' => 'c71ecc56dfe541dbd90c5360474fbc405f8d5963',
+    ),
+    'psr/http-message' => 
+    array (
+      'pretty_version' => '1.0.1',
+      'version' => '1.0.1.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'f6561bf28d520154e4b0ec72be95418abe6d9363',
     ),
     'psr/log-implementation' => 
     array (
@@ -29,12 +110,12 @@
     ),
     'root/rebuild' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '667f603f922d16715c0ee46ff0f1e5beb6480562',
     ),
     'symfony/console' => 
     array (

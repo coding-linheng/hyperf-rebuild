@@ -6,7 +6,7 @@ use Symfony\Component\Finder\Finder;
 
 class ConfigFactory
 {
-    public function __invoke()
+    public function __invoke(): Config
     {
         $basePath     = BASE_PATH . "/config";
         $configFile   = $this->readConfig($basePath . '/config.php');
@@ -24,7 +24,7 @@ class ConfigFactory
         return $config;
     }
 
-    protected function readPath(array $dirs)
+    protected function readPath(array $dirs): array
     {
         $config = [];
         $finder = new Finder;

@@ -12,6 +12,7 @@ class ComposerStaticInit3acbaf25bb3af0140f38a7bcb3857116
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
+        'bbeb7603826cb9296dde3ca1a840af47' => __DIR__ . '/..' . '/hyperf/utils/src/Functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -36,7 +37,25 @@ class ComposerStaticInit3acbaf25bb3af0140f38a7bcb3857116
         ),
         'P' => 
         array (
+            'Psr\\Http\\Message\\' => 17,
             'Psr\\Container\\' => 14,
+        ),
+        'L' => 
+        array (
+            'Laminas\\Stdlib\\' => 15,
+            'Laminas\\Mime\\' => 13,
+        ),
+        'H' => 
+        array (
+            'Hyperf\\Utils\\' => 13,
+            'Hyperf\\Macroable\\' => 17,
+            'Hyperf\\HttpMessage\\' => 19,
+            'Hyperf\\Engine\\' => 14,
+            'Hyperf\\Contract\\' => 16,
+        ),
+        'D' => 
+        array (
+            'Doctrine\\Inflector\\' => 19,
         ),
     );
 
@@ -81,9 +100,45 @@ class ComposerStaticInit3acbaf25bb3af0140f38a7bcb3857116
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Psr\\Http\\Message\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
         'Psr\\Container\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'Laminas\\Stdlib\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-stdlib/src',
+        ),
+        'Laminas\\Mime\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laminas/laminas-mime/src',
+        ),
+        'Hyperf\\Utils\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hyperf/utils/src',
+        ),
+        'Hyperf\\Macroable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hyperf/macroable/src',
+        ),
+        'Hyperf\\HttpMessage\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hyperf/http-message/src',
+        ),
+        'Hyperf\\Engine\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hyperf/engine/src',
+        ),
+        'Hyperf\\Contract\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hyperf/contract/src',
+        ),
+        'Doctrine\\Inflector\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Inflector',
         ),
     );
 
