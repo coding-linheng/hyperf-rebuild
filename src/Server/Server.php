@@ -3,7 +3,7 @@
 namespace rebuild\Server;
 
 use rebuild\Contract\ServerInterface;
-use Swoole\Coroutine\Server as SwooleCoServer;
+use rebuild\HttpServer\Router\DispatcherFactory;
 use Swoole\Server as SwooleServer;
 
 class Server implements ServerInterface
@@ -40,8 +40,16 @@ class Server implements ServerInterface
     {
         foreach($callbacks as $swooleEvent => $callback) {
             [$class, $method] = $callback;
-            $instance = new $class;
+            if($class === \rebuild\HttpServer\Server::class) {
+                $instance = new $class(new DispatcherFactory);
+            } else {
+                $instance = new $class;
+            }
             $this->server->on($swooleEvent, [$instance, $method]);
+            if(method_exists($instance,'initCoreMiddleware')){
+                /** @var \rebuild\HttpServer\Server $instance */
+                $instance->initCoreMiddleware();
+            }
         }
     }
 }
