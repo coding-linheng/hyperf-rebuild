@@ -5,5 +5,4 @@ use app\Middleware\MiddlewareA;
 
 return [
     MiddlewareA::class,
-    Middleware::class
 ];

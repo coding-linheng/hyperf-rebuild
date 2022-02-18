@@ -16,6 +16,11 @@ class Server implements ServerInterface
     {
     }
 
+    /**
+     * 根据配置文件初始化服务配置
+     * @param array $config
+     * @return ServerInterface
+     */
     public function init(array $config): ServerInterface
     {
         foreach($config['servers'] as $server) {
@@ -36,16 +41,23 @@ class Server implements ServerInterface
         return $this->server;
     }
 
+    /**
+     * 注册swoole事件
+     * @param array $callbacks
+     * @return void
+     */
     protected function registerSwooleEvents(array $callbacks)
     {
         foreach($callbacks as $swooleEvent => $callback) {
             [$class, $method] = $callback;
+            //注册路由
             if($class === \rebuild\HttpServer\Server::class) {
                 $instance = new $class(new DispatcherFactory);
             } else {
                 $instance = new $class;
             }
             $this->server->on($swooleEvent, [$instance, $method]);
+            //初始化核心中间件
             if(method_exists($instance,'initCoreMiddleware')){
                 /** @var \rebuild\HttpServer\Server $instance */
                 $instance->initCoreMiddleware();

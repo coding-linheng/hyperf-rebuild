@@ -27,10 +27,13 @@ class StartCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
+        //获取server服务配置
         $config        = $this->config;
         $serverConfig  = $config->get('server');
         $serverFactory = new ServerFactory;
+        //进行server服务初始化/事件注册
         $serverFactory->configure($serverConfig);
+        //启动服务
         $serverFactory->getServer()->start();
         return 1;
     }

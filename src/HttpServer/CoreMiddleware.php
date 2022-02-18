@@ -26,6 +26,7 @@ class CoreMiddleware implements CoreMiddlewareInterface
 
     public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface
     {
+        //获取转换的路由调度器
         $dispatched = $request->getAttribute(Dispatched::class);
         if(!$dispatched instanceof Dispatched) {
             throw new \InvalidArgumentException('Route not found');
@@ -74,7 +75,7 @@ class CoreMiddleware implements CoreMiddlewareInterface
         if(!method_exists($controller, $action)) {
             throw new \InvalidArgumentException('Action of Controller not exists');
         }
-        $params             = [];
+        $params             = $dispatched->params;
         $controllerInstance = new $controller;
         return $controllerInstance->{$action}(...$params);
     }

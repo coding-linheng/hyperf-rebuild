@@ -15,6 +15,11 @@ class ConfigFactory
         return new Config($configs);
     }
 
+    /**
+     * 读取config配置文件
+     * @param string $string
+     * @return array
+     */
     protected function readConfig(string $string): array
     {
         $config = require $string;
@@ -24,6 +29,11 @@ class ConfigFactory
         return $config;
     }
 
+    /**
+     * 获取autoload文件夹配置
+     * @param array $dirs
+     * @return array
+     */
     protected function readPath(array $dirs): array
     {
         $config = [];
@@ -31,7 +41,6 @@ class ConfigFactory
         $finder->files()->in($dirs)->name('*.php');
         foreach($finder as $fileInfo) {
             $key = $fileInfo->getBasename('.php');
-
             $config[$key] = require $fileInfo->getRealPath();
         }
         return $config;

@@ -11,8 +11,6 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-use Swoole\Constant;
-
 return [
     'mode'      => SWOOLE_PROCESS,
     'servers'   => [
@@ -30,9 +28,5 @@ return [
     'settings'  => [
         'enable_coroutine' => true,
         'worker_num' => 1
-
-    ],
-    'callbacks' => [
-        'worker_start' => [Hyperf\Framework\Bootstrap\WorkerStartCallback::class, 'onWorkerStart'],
-    ],
+    ]
 ];
